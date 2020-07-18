@@ -21,11 +21,12 @@
             for (let i = 1; i < 10; i++) {
                 html += `<div class="row center">`
                 for (let j = 1; j < 10; j++) {
-                    html += `<div class="cell" id="cell_` + i.toString() + j.toString + `">
-                            <label class="hint" id="hint_` + i.toString() + j.toString + `"></label>
-                            <input oninput="update_grid(` + i.toString() + ", " + j.toString + `)" id="inp_` + i.toString() + j.toString + `" type="number" min="1" max="9">
+                    html += `<div class="cell" id="cell_` + i.toString() + j.toString() + `">
+                            <label class="hint" id="hint_` + i.toString() + j.toString() + `"></label>
+                            <input oninput="update_grid(` + i.toString() + ", " + j.toString() + `)" id="inp_` + i.toString() + j.toString() + `" type="number" min="1" max="9">
                         </div>`
                 }
+                html += "</div>";
             }
             document.getElementById("grid").innerHTML += html;
         </script>
